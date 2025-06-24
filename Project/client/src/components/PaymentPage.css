@@ -1,0 +1,92 @@
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.payment-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInSlide 0.7s ease-out;
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #003087;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInSlide 0.6s ease-out 0.2s forwards;
+}
+
+.payment-container label,
+.payment-container input,
+.pay-button {
+  opacity: 0;
+  animation: fadeInSlide 0.6s ease-out forwards;
+}
+
+.payment-container label:nth-of-type(1) { animation-delay: 0.4s; }
+.payment-container input:nth-of-type(1) { animation-delay: 0.5s; }
+
+.payment-container label:nth-of-type(2) { animation-delay: 0.6s; }
+.payment-container input:nth-of-type(2) { animation-delay: 0.7s; }
+
+.payment-container label:nth-of-type(3) { animation-delay: 0.8s; }
+.payment-container input:nth-of-type(3) { animation-delay: 0.9s; }
+
+.pay-button {
+  animation-delay: 1.1s;
+}
+
+.payment-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.payment-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-container input:focus {
+  border-color: #0070ba;
+  box-shadow: 0 0 8px rgba(0, 112, 186, 0.3);
+  outline: none;
+}
+
+.pay-button {
+  width: 100%;
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pay-button:hover {
+  background-color: #005ea6;
+  transform: translateY(-2px);
+}
